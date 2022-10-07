@@ -1,0 +1,64 @@
+*   Trying 188.114.96.7:443...
+* TCP_NODELAY set
+* Connected to jsonplaceholder.typicode.com (188.114.96.7) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+  CApath: /etc/ssl/certs
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: C=US; ST=California; L=San Francisco; O=Cloudflare, Inc.; CN=sni.cloudflaressl.com
+*  start date: Jun  6 00:00:00 2022 GMT
+*  expire date: Jun  5 23:59:59 2023 GMT
+*  subjectAltName: host "jsonplaceholder.typicode.com" matched cert's "*.typicode.com"
+*  issuer: C=US; O=Cloudflare, Inc.; CN=Cloudflare Inc ECC CA-3
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x55dc532078c0)
+> GET /posts/1/comments HTTP/2
+> Host: jsonplaceholder.typicode.com
+> user-agent: curl/7.68.0
+> accept: */*
+> 
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* old SSL session ID is stale, removing
+* Connection state changed (MAX_CONCURRENT_STREAMS == 256)!
+< HTTP/2 200 
+< date: Fri, 07 Oct 2022 10:34:11 GMT
+
+
+< content-type: application/json; charset=utf-8
+
+
+< x-powered-by: Express
+< x-ratelimit-limit: 1000
+< x-ratelimit-remaining: 997
+< x-ratelimit-reset: 1665037146
+< vary: Origin, Accept-Encoding
+< access-control-allow-credentials: true
+< cache-control: max-age=43200
+< pragma: no-cache
+< expires: -1
+< x-content-type-options: nosniff
+< etag: W/"5e6-4bSPS5tq8F8ZDeFJULWh6upjp7U"
+< via: 1.1 vegur
+< cf-cache-status: HIT
+< age: 15359
+< report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PWkFgWeKkUmf3VNIojHjy63KtbgTkzJFSV9n4qvFp3lthRhFA5ovd0sXc5DB%2Bsq227%2F%2FqM%2B0MK4I0%2BrkWSFM5ueD4MLJ%2FubXykmUAr43wCRTwZDRd9oMhoOfey8uUfLpk1jJk%2Biz56f0pr%2BYzKCs"}],"group":"cf-nel","max_age":604800}
+< nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+< server: cloudflare
+< cf-ray: 7565fb9cfa35baed-MXP
+< alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
